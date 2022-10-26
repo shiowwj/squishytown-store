@@ -3,7 +3,9 @@ import Link from 'next/link'
 import s from './Navbar.module.css'
 import NavbarRoot from './NavbarRoot'
 import { Logo, Container } from '@components/ui'
-import { Searchbar, UserNav } from '@components/common'
+import { Searchbar, UserNav, BannerBar } from '@components/common'
+import Image from 'next/image'
+// import BannerBar from '@components/BannerBar'
 
 interface Link {
   href: string
@@ -16,28 +18,38 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
+    {/* <BannerBar title="Free shipping for orders above $50." /> */}
     <Container clean className="mx-auto max-w-8xl px-6">
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
-              <Logo />
+              {/* <Logo /> */}
+              <Image
+                src={'/Squishy-Town-Logo-circle.svg'}
+                width={40}
+                height={40}
+                alt={''}
+              />
             </a>
           </Link>
-          <nav className={s.navMenu}>
+          {/* code for navbar menu */}
+          {/* <nav className={s.navMenu}>
             <Link href="/search">
               <a className={s.link}>All</a>
             </Link>
+
             {links?.map((l) => (
               <Link href={l.href} key={l.href}>
                 <a className={s.link}>{l.label}</a>
               </Link>
             ))}
-          </nav>
+          </nav> */}
         </div>
         {process.env.COMMERCE_SEARCH_ENABLED && (
           <div className="justify-center flex-1 hidden lg:flex">
             <Searchbar />
+            {/* <SearchbarV2 /> */}
           </div>
         )}
         <div className="flex items-center justify-end flex-1 space-x-8">

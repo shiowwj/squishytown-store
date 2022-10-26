@@ -11,7 +11,7 @@
 }
 
 .root .name span {
-  @apply py-4 px-6 bg-primary text-primary font-bold;
+  @apply py-4 px-6 bg-primary text-store-abutton-blue font-bold rounded-tr-2xl rounded-br-2xl;
   min-height: 70px;
   font-size: inherit;
   letter-spacing: inherit;
@@ -25,7 +25,7 @@
 }
 
 .root .price {
-  @apply pt-2 px-6 pb-4 text-sm bg-primary text-accent-9
-  font-semibold inline-block tracking-wide;
+  @apply pt-2 px-6 pb-4 text-sm bg-primary text-store-abutton-blue
+  font-semibold inline-block tracking-wide rounded-br-2xl;
   margin-top: -1px;
 }

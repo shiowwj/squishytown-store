@@ -1,25 +1,25 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
-  "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "title": "Squishy Town Singapore",
+  "titleTemplate": "%s - Squishy Town Singapore Storefront",
+  "description": "Squishy Town Singapore - https://thesquishytown.com/",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "Squishy Town Singapore",
+    "description": "Squishy Town Singapore - https://thesquishytown.com/",
     "type": "website",
-    "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "url": "https://thesquishytown.com/",
+    "site_name": "Squishy Town Singapore",
     "images": [
       {
-        "url": "/card.png",
+        "url": "/Squishy-Town-Logo-main.png",
         "width": "800",
         "height": "600",
-        "alt": "Next.js Commerce"
+        "alt": "Squishy Town Singapore"
       }
     ]
   },
   "twitter": {
-    "handle": "@nextjs",
-    "site": "@nextjs",
+    "handle": "@thesquishytown",
+    "site": "@thesquishytown",
     "cardType": "summary_large_image"
   }
 }

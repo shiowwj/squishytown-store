@@ -1,5 +1,6 @@
 .root {
-  @apply flex flex-col py-16 mx-auto;
+  @apply relative w-[full] h-[24vh] md:h-[30vh] lg:h-[50vh] mb-3 md:mb-6 lg:mb-6;
+  /* @apply flex flex-col mx-auto w-full h-[10vh]; */
 }
 
 .title {
@@ -12,7 +13,7 @@
 
 @screen lg {
   .root {
-    @apply flex-row items-start justify-center py-32;
+    @apply flex-row items-start justify-center;
   }
   .title {
     @apply text-5xl max-w-xl text-right leading-10 -mt-3;

@@ -24,9 +24,9 @@
 .link:focus {
   @apply outline-none text-accent-8;
 }
-
+/* rounded-full border */
 .logo {
-  @apply cursor-pointer rounded-full border transform duration-100 ease-in-out;
+  @apply cursor-pointer  transform duration-100 ease-in-out;
 
   &:hover {
     @apply shadow-md;

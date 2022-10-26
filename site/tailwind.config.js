@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,10 +7,35 @@ module.exports = {
   safelist: ['outline-none'],
   theme: {
     extend: {
+      backgroundImage: {
+        'main-background': "url('/assets/bg-cover.svg')",
+        'side-cloud': "url('/assets/clouds.svg')",
+        'button-cloud': "url('/assets/cloud_button.svg')",
+        'hero-background': "url('/assets/bg_hero_main_cover.svg')",
+        'searchbar-background': "url('/searchbar.svg')",
+      },
       maxWidth: {
         '8xl': '1920px',
       },
       colors: {
+        store: {
+          'p-light': 'var(--store-primary-light)',
+          's-light': 'var(--store-secondary-light)',
+
+          'p-dark': 'var(--store-primary-dark)',
+          's-dark': 'var(--store-secondary-dark)',
+
+          'a-green': 'var(--store-alt-green)',
+          'a-red': 'var(--store-alt-red)',
+          'a-blue': 'var(--store-alt-blue)',
+
+          'aborder-blue': 'var(--store-alt-border-blue)',
+          'aborder-purple': 'var(--store-alt-border-purple)',
+          'aborder-pink': 'var(--store-alt-border-pink)',
+          'aborder-yellow': 'var(--store-alt-border-yellow)',
+
+          'abutton-blue': 'var(--store-alt-button-blue)',
+        },
         primary: 'var(--primary)',
         'primary-2': 'var(--primary-2)',
         secondary: 'var(--secondary)',
@@ -52,6 +78,10 @@ module.exports = {
       },
       scale: {
         120: '1.2',
+      },
+      fontFamily: {
+        rockoflf: ['RockoFLF, sans-serif'],
+        kiddos: ['Kiddos, sans-serif'],
       },
     },
   },

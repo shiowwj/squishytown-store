@@ -1,0 +1,18 @@
+:root {
+  --store-primary-light: #ffffff;
+  --store-secondary-light: #e3f7ff;
+
+  --store-primary-dark: #000000;
+  --store-secondary-dark: #232329;
+
+  --store-alt-green: #a4e4c5;
+  --store-alt-red: #f8afa7;
+  --store-alt-blue: #49c8f5;
+
+  --store-alt-border-blue: #53e0f0;
+  --store-alt-border-purple: #b4abea;
+  --store-alt-border-pink: #dac0ef;
+  --store-alt-border-yellow: #fff2b3;
+
+  --store-alt-button-blue: #6dc2d1;
+}

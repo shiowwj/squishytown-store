@@ -8,6 +8,7 @@ import { Github, Vercel } from '@components/icons'
 import { Logo, Container } from '@components/ui'
 import { I18nWidget } from '@components/common'
 import s from './Footer.module.css'
+import Image from 'next/image'
 
 interface Props {
   className?: string
@@ -29,15 +30,25 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-primary bg-primary transition-colors duration-150">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 px-8 text-primary bg-primary transition-colors duration-150">
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
-              <a className="flex flex-initial items-center font-bold md:mr-24">
-                <span className="rounded-full border border-accent-6 mr-2">
-                  <Logo />
-                </span>
-                <span>ACME</span>
-              </a>
+              <div className="flex flex-col items-center font-bold md:mr-24 cursor-pointer text-center">
+                {/* <span className="rounded-full border border-accent-6 mr-2"> */}
+                {/* <Logo /> */}
+                <div className="">
+                  <Image
+                    src={'/Squishy-Town-Logo-circle.svg'}
+                    width={100}
+                    height={100}
+                    alt={''}
+                  />
+                </div>
+                {/* </span> */}
+                <div>
+                  <span>My Squishy Store</span>
+                </div>
+              </div>
             </Link>
           </div>
           <div className="col-span-1 lg:col-span-8">
@@ -53,24 +64,26 @@ const Footer: FC<Props> = ({ className, pages }) => {
               ))}
             </div>
           </div>
+
+          {/* Add socials here */}
           <div className="col-span-1 lg:col-span-2 flex items-start lg:justify-end text-primary">
             <div className="flex space-x-6 items-center h-10">
-              <a
+              {/* <a
                 className={s.link}
                 aria-label="Github Repository"
                 href="https://github.com/vercel/commerce"
               >
                 <Github />
-              </a>
-              <I18nWidget />
+              </a> */}
+              {/* <I18nWidget /> */}
             </div>
           </div>
         </div>
-        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
+        <div className="pt-6 px-6 pb-10 flex flex-col md:flex-row justify-center items-center space-y-4 text-accent-6 text-lg font-kiddos">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+            <span>&copy; Squishytown 2022. All Rights Reserved.</span>
           </div>
-          <div className="flex items-center text-primary text-sm">
+          {/* <div className="flex items-center text-primary text-sm">
             <span className="text-primary">Created by</span>
             <a
               rel="noopener noreferrer"
@@ -84,7 +97,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 alt="Vercel.com Logo"
               />
             </a>
-          </div>
+          </div> */}
         </div>
       </Container>
     </footer>

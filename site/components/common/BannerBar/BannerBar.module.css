@@ -1,0 +1,6 @@
+.root {
+  @apply text-center align-middle py-2 bg-gradient-to-r from-store-aborder-blue to-store-aborder-purple text-lg flex-row  text-store-p-dark
+  justify-center items-center font-medium
+  w-full z-[100] transition-all duration-300 ease-out
+  md:flex md:text-left;
+}

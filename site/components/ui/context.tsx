@@ -165,10 +165,10 @@ export const UIProvider: FC<{ children?: ReactNode }> = (props) => {
     [dispatch]
   )
 
-  const setUserAvatar = useCallback(
-    (value: string) => dispatch({ type: 'SET_USER_AVATAR', value }),
-    [dispatch]
-  )
+  // const setUserAvatar = useCallback(
+  //   (value: string) => dispatch({ type: 'SET_USER_AVATAR', value }),
+  //   [dispatch]
+  // )
 
   const setModalView = useCallback(
     (view: MODAL_VIEWS) => dispatch({ type: 'SET_MODAL_VIEW', view }),
@@ -193,7 +193,7 @@ export const UIProvider: FC<{ children?: ReactNode }> = (props) => {
       closeModal,
       setModalView,
       setSidebarView,
-      setUserAvatar,
+      // setUserAvatar,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [state]
