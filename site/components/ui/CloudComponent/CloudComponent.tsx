@@ -6,7 +6,7 @@ interface CloudComponentProps {
 
 const CloudComponent: FC<CloudComponentProps> = ({ children }) => (
   <svg
-    className="md:px-2 lg:px-3 cursor-pointer fill-store-abutton-blue lg:text-xl md:text-xl text-lg font-medium hover:fill-store-a-red uppercase"
+    className="md:px-2 lg:px-3 cursor-pointer fill-store-abutton-blue lg:text-lg md:text-lg font-medium hover:fill-store-a-red uppercase"
     width="193"
     height="110"
     viewBox="0 0 193 110"
@@ -22,16 +22,7 @@ const CloudComponent: FC<CloudComponentProps> = ({ children }) => (
       fill="#E3F7FF"
       stroke="#E3F7FF"
     />
-    <foreignObject
-      // x="48%"
-      // y="55%"
-      // dominantBaseline={'middle'}
-      // textAnchor={'middle'}
-      x="19%"
-      y="25%"
-      width="150"
-      height="80"
-    >
+    <foreignObject x="19%" y="25%" width="150" height="80">
       {children}
     </foreignObject>
   </svg>

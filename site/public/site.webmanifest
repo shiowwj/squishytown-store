@@ -1,7 +1,7 @@
 {
-  "name": "Next.js Commerce",
-  "short_name": "Next.js Commerce",
-  "description": "Next.js Commerce -> https://www.nextjs.org/commerce",
+  "name": "Squishy Town Singapore",
+  "short_name": "Squishy Town Singapore",
+  "description": "Squishy Town Singapore -> https://thesquishytown.com",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",

@@ -1,0 +1,3 @@
+.root {
+  @apply hidden lg:visible md:visible lg:flex md:flex flex-row justify-center lg:w-[90vw] lg:mx-auto mb-6;
+}
