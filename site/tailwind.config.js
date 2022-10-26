@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'main-background': "url('/assets/bg-cover.svg')",
+        'main-background': "url('/assets/bg_cover.svg')",
         'side-cloud': "url('/assets/clouds.svg')",
         'button-cloud': "url('/assets/cloud_button.svg')",
         'hero-background': "url('/assets/bg_hero_main_cover.svg')",

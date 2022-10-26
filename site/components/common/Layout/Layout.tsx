@@ -108,10 +108,8 @@ const Layout: React.FC<Props> = ({
   children,
   pageProps: { categories = [], ...pageProps },
 }) => {
-  console.log(categories)
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
-  // console.log('categores', categories)
   const navBarlinks = categories.slice(1, categories.length).map((c) => ({
     label: c.name,
     href: `/search/${c.slug}`,
@@ -122,13 +120,13 @@ const Layout: React.FC<Props> = ({
       <div className={cn(s.root)}>
         <BannerBar title="Free shipping for orders above $50." />
         <Navbar links={navBarlinks} />
-        <main className="fit mb-16">{children}</main>
+        <main className="fit mb-12">{children}</main>
         <Footer pages={pageProps.pages} />
         <ModalUI />
         <CheckoutProvider>
           <SidebarUI links={navBarlinks} />
         </CheckoutProvider>
-        <FeatureBar
+        {/* <FeatureBar
           title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."
           hide={acceptedCookies}
           action={
@@ -136,7 +134,7 @@ const Layout: React.FC<Props> = ({
               Accept cookies
             </Button>
           }
-        />
+        /> */}
       </div>
     </CommerceProvider>
   )

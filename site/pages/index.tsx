@@ -1,9 +1,10 @@
 import commerce from '@lib/api/commerce'
-import { Layout } from '@components/common'
+import { CloudNavBar, Layout } from '@components/common'
 import { ProductCard } from '@components/product'
 import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import Link from 'next/link'
 
 export async function getStaticProps({
   preview,
@@ -39,13 +40,17 @@ export default function Home({
   products,
   pages,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(pages)
+  console.log('Home', pages)
   return (
     <>
       <Hero
+        className="-z-10"
         headline=" Dessert dragée halvah croissant."
         description="Cupcake ipsum dolor sit amet lemon drops pastry cotton candy. Sweet carrot cake macaroon bonbon croissant fruitcake jujubes macaroon oat cake. Soufflé bonbon caramels jelly beans. Tiramisu sweet roll cheesecake pie carrot cake. "
       />
+
+      <CloudNavBar pages={pages} />
+
       <Grid layout="normal" variant="filled" className="pb-16">
         {products.slice(0, products.length).map((product: any, i: number) => (
           <ProductCard
