@@ -1,5 +1,5 @@
 .root {
-  @apply relative w-[full] h-[24vh] md:h-[30vh] lg:h-[50vh] mb-3 md:-mb-12 lg:-mb-6;
+  @apply relative w-[full] h-[24vh] md:h-[30vh] lg:h-[50vh] mb-3 md:-mb-12 lg:-mb-6 -z-30;
   /* @apply flex flex-col mx-auto w-full h-[10vh]; */
 }
 
