@@ -27,8 +27,8 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
               {/* <Logo /> */}
               <Image
                 src={'/Squishy-Town-Logo-circle.svg'}
-                width={40}
-                height={40}
+                width={42}
+                height={42}
                 alt={''}
               />
             </a>

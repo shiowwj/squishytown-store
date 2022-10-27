@@ -1,5 +1,5 @@
 .root {
-  @apply grid grid-cols-1 gap-0 px-10;
+  @apply grid grid-cols-1 gap-0 lg:px-10 md:px-16 px-16 py-16 lg:py-0 md:py-0;
 }
 .root > * {
   @apply row-span-1 bg-transparent box-border overflow-hidden;
@@ -12,7 +12,7 @@
 }
 
 .layoutNormal {
-  @apply gap-16;
+  @apply gap-20;
 }
 
 .layoutA {

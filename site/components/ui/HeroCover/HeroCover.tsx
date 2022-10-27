@@ -14,7 +14,7 @@ const HeroCover: FC<HeroProps> = ({ className }) => {
       <Container className="max-w-7xl px-6">
         <div className={s.root}>
           <Image
-            src={'/assets/bg_hero_main_cover.svg'}
+            src={'/bg_hero_main_cover.svg'}
             alt={'hero-banner'}
             loading={'eager'}
             layout="fill"

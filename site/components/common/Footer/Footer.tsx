@@ -46,7 +46,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 </div>
                 {/* </span> */}
                 <div>
-                  <span>My Squishy Store</span>
+                  <span>Squishy Town Store Singapore</span>
                 </div>
               </div>
             </Link>

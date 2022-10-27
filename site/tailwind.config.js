@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'main-background': "url('/assets/bg_cover.svg')",
-        'side-cloud': "url('/assets/clouds.svg')",
-        'button-cloud': "url('/assets/cloud_button.svg')",
-        'hero-background': "url('/assets/bg_hero_main_cover.svg')",
+        'main-background': "url('/bg_cover.svg')",
+        'side-cloud': "url('/clouds.svg')",
+        'button-cloud': "url('/cloud_button.svg')",
+        'hero-background': "url('/bg_hero_main_cover.svg')",
         'searchbar-background': "url('/searchbar.svg')",
       },
       maxWidth: {

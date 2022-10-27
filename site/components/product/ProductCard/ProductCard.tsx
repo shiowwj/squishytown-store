@@ -13,7 +13,7 @@ interface Props {
   product: Product
   noNameTag?: boolean
   imgProps?: Omit<ImageProps, 'src' | 'layout' | 'placeholder' | 'blurDataURL'>
-  variant?: 'default' | 'slim' | 'simple'
+  variant?: 'default' | 'slim' | 'simple' | 'squishytown'
 }
 
 const placeholderImg = '/product-img-placeholder.svg'
@@ -25,6 +25,7 @@ const ProductCard: FC<Props> = ({
   noNameTag = false,
   variant = 'default',
 }) => {
+  // console.log('cur product', product)
   const { price } = usePrice({
     amount: product.price.value,
     baseAmount: product.price.retailPrice,
@@ -110,7 +111,9 @@ const ProductCard: FC<Props> = ({
             )}
             <ProductTag
               name={product.name}
-              price={`${price} ${product.price?.currencyCode}`}
+              // ${product.price?.currencyCode}
+              price={`${price} `}
+              fontSize={16}
             />
             <div className={s.imageContainer}>
               {product?.images && (

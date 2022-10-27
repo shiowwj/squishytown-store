@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import s from './Layout.module.css'
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
+import { Router, useRouter } from 'next/router'
 import { CommerceProvider } from '@framework'
 import LoginView from '@components/auth/LoginView'
 import { useUI } from '@components/ui/context'
@@ -108,8 +108,13 @@ const Layout: React.FC<Props> = ({
   children,
   pageProps: { categories = [], ...pageProps },
 }) => {
+  // console.log(Router.)
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
+  // console.log('pathname', pathname)
+  // if (pathname == '/') {
+  //   console.log('must be root')
+  // }
   const navBarlinks = categories.slice(1, categories.length).map((c) => ({
     label: c.name,
     href: `/search/${c.slug}`,

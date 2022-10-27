@@ -5,8 +5,9 @@ import type {
 } from 'next'
 import { useRouter } from 'next/router'
 import commerce from '@lib/api/commerce'
-import { Layout } from '@components/common'
+import { CloudNavBar, Layout } from '@components/common'
 import { ProductView } from '@components/product'
+import { HeroCover } from '@components/ui'
 
 export async function getStaticProps({
   params,
@@ -69,13 +70,19 @@ export async function getStaticPaths({ locales }: GetStaticPathsContext) {
 export default function Slug({
   product,
   relatedProducts,
+  pages,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
 
   return router.isFallback ? (
     <h1>Loading...</h1>
   ) : (
-    <ProductView product={product} relatedProducts={relatedProducts} />
+    <>
+      <HeroCover />
+
+      <CloudNavBar pages={pages} />
+      <ProductView product={product} relatedProducts={relatedProducts} />
+    </>
   )
 }
 

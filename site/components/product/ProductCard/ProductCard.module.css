@@ -6,7 +6,6 @@
   box-shadow: 1em 1em 0 #dac0ef;
 }
 
-/* box-shadow: 1em 1em 0 black; */
 .root:hover {
   box-shadow: 1em 1em 0 #fff2b3;
   & .productImage {

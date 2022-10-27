@@ -10,17 +10,25 @@ interface CloudNavBarProps {
 const CloudNavBar: React.FC<CloudNavBarProps> = ({ pages }) => {
   return (
     <nav className={s.root}>
+      <Link href="/search">
+        <a className={s.link}>
+          <CloudComponent>
+            <div className={s.div}>
+              <span className={s.span}>All</span>
+            </div>
+          </CloudComponent>
+        </a>
+      </Link>
       {pages ? (
         pages.map((page) => (
           <Link href={page.url!} key={page.id}>
-            <a className="text-store-abutton-blue hover:text-store-a-red transition ease-in-out duration-150">
+            <a className={s.link}>
               <CloudComponent>
-                <span
-                  key={page.url}
-                  className="py-3 md:py-0 md:pb-4 items-center inline-flex min-h-[80px]"
-                >
-                  {page.name}
-                </span>
+                <div className={s.div}>
+                  <span key={page.url} className={s.span}>
+                    {page.name}
+                  </span>
+                </div>
               </CloudComponent>
             </a>
           </Link>
