@@ -171,7 +171,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
           </div>
 
           {/* Designs */}
-          <div className="relative inline-block w-full">
+          {/* <div className="relative inline-block w-full">
             <div className="lg:hidden mt-3">
               <span className="rounded-md shadow-sm">
                 <button
@@ -269,7 +269,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* Products */}
         <div className="col-span-8 order-3 lg:order-none">
@@ -317,10 +317,11 @@ export default function Search({ categories, brands }: SearchPropsType) {
             </div>
           )}
           {data ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 px-7">
               {data.products.map((product: Product) => (
+                // variant="simple"
                 <ProductCard
-                  variant="simple"
+                  variant="descbottom"
                   key={product.path}
                   className="animated fadeIn"
                   product={product}

@@ -53,6 +53,7 @@ export default function Home({
       <Grid layout="normal" variant="filled" className="pb-16">
         {products.slice(0, products.length).map((product: any, i: number) => (
           <ProductCard
+            variant="descbottom"
             key={product.id}
             product={product}
             imgProps={{

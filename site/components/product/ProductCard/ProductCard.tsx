@@ -7,13 +7,14 @@ import Image, { ImageProps } from 'next/image'
 import WishlistButton from '@components/wishlist/WishlistButton'
 import usePrice from '@framework/product/use-price'
 import ProductTag from '../ProductTag'
+import ProductTagV2 from '../ProductTagV2'
 
 interface Props {
   className?: string
   product: Product
   noNameTag?: boolean
   imgProps?: Omit<ImageProps, 'src' | 'layout' | 'placeholder' | 'blurDataURL'>
-  variant?: 'default' | 'slim' | 'simple' | 'squishytown'
+  variant?: 'default' | 'slim' | 'simple' | 'descbottom'
 }
 
 const placeholderImg = '/product-img-placeholder.svg'
@@ -131,6 +132,31 @@ const ProductCard: FC<Props> = ({
                 </div>
               )}
             </div>
+          </>
+        )}
+        {variant === 'descbottom' && (
+          <>
+            <div className={s.imageContainer}>
+              {product?.images && (
+                <div>
+                  <Image
+                    alt={product.name || 'Product Image'}
+                    className={s.productImage}
+                    src={product.images[0]?.url || placeholderImg}
+                    height={540}
+                    width={540}
+                    quality="85"
+                    layout="responsive"
+                    {...imgProps}
+                  />
+                </div>
+              )}
+            </div>
+            <ProductTagV2
+              name={product.name}
+              price={`${price} `}
+              fontSize={16}
+            />
           </>
         )}
       </a>
