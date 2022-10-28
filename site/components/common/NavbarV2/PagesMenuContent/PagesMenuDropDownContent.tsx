@@ -1,4 +1,3 @@
-import cn from 'clsx'
 import { useRouter } from 'next/router'
 import s from './PagesMenuDropDownContent.module.css'
 import {
@@ -7,7 +6,6 @@ import {
 } from '@components/ui/Dropdown/Dropdown'
 import { Link as LinkProps } from '../NavbarV2'
 import { FC } from 'react'
-import Link from 'next/link'
 
 interface PagesMenuDropDownContentProps {
   collectionLinks?: LinkProps[]
@@ -17,8 +15,6 @@ const PagesMenuDropDownContent: FC<PagesMenuDropDownContentProps> = ({
   collectionLinks,
 }) => {
   const router = useRouter()
-
-  const { pathname } = useRouter()
 
   const handleClick = (
     _: React.MouseEvent<HTMLAnchorElement>,

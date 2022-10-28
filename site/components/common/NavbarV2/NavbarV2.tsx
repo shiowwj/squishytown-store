@@ -45,7 +45,7 @@ const NavbarV2: FC<NavbarV2Props> = ({ links, pages }) => {
               <Dropdown>
                 <DropdownTrigger>
                   {/* <button> */}
-                  <div className="flex">
+                  <div className={s.linkShopall}>
                     Shop All
                     <ChevronDown />
                   </div>

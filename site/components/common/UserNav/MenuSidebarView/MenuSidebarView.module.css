@@ -1,7 +1,31 @@
 .root {
-  @apply px-4 sm:px-6 sm:w-full flex-1 z-20;
+  @apply px-4 sm:px-6 sm:w-full flex-1 z-20 flex flex-col justify-between h-full;
 }
 
 .item {
   @apply text-xl font-bold py-2;
+}
+
+.item:hover {
+  @apply text-store-a-red;
+}
+
+.itemShopAll {
+  @apply flex items-center justify-between cursor-pointer;
+}
+
+.itemShopAllCurrent {
+  @apply flex items-center justify-between cursor-pointer;
+}
+
+.socials {
+  @apply flex pb-8 border-t-2 pt-8;
+}
+
+.social {
+  @apply mx-3;
+}
+
+.social:hover {
+  @apply cursor-pointer;
 }

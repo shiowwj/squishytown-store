@@ -23,7 +23,8 @@
 }
 
 .link:hover {
-  @apply bg-store-aborder-yellow outline-none;
+  /* @apply bg-store-aborder-yellow outline-none; */
+  @apply text-store-a-red;
 }
 
 .link.active {

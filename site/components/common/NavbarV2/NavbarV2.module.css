@@ -14,11 +14,21 @@
 .link {
   @apply inline-flex items-center leading-6
   transition ease-in-out duration-75 cursor-pointer
-  text-accent-5;
+  text-store-p-dark text-xl font-bold;
+}
+
+.linkShopall {
+  @apply flex items-center leading-6
+  transition ease-in-out duration-75 cursor-pointer
+  text-store-p-dark text-xl font-bold;
 }
 
 .link:hover {
-  @apply text-accent-9;
+  @apply text-store-a-red;
+}
+
+.linkShopall:hover {
+  @apply text-store-a-red;
 }
 
 .link:focus {

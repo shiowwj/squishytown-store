@@ -81,23 +81,31 @@ const SidebarView: React.FC<{
   sidebarView: string
   closeSidebar(): any
   links: LinkProps[]
-}> = ({ sidebarView, closeSidebar, links }) => {
+  collectionPages: LinkProps[]
+}> = ({ sidebarView, closeSidebar, links, collectionPages }) => {
   return (
     <Sidebar onClose={closeSidebar}>
       {sidebarView === 'CART_VIEW' && <CartSidebarView />}
       {sidebarView === 'SHIPPING_VIEW' && <ShippingView />}
       {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />}
       {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />}
-      {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />}
+      {sidebarView === 'MOBILE_MENU_VIEW' && (
+        <MenuSidebarView links={links} collectionPages={collectionPages} />
+      )}
     </Sidebar>
   )
 }
 
-const SidebarUI: React.FC<{ links: LinkProps[] }> = ({ links }) => {
+const SidebarUI: React.FC<{
+  links: LinkProps[]
+  collectionPages: LinkProps[]
+}> = ({ links, collectionPages }) => {
   const { displaySidebar, closeSidebar, sidebarView } = useUI()
+  console.log('SidebarUI', collectionPages)
   return displaySidebar ? (
     <SidebarView
       links={links}
+      collectionPages={collectionPages}
       sidebarView={sidebarView}
       closeSidebar={closeSidebar}
     />
@@ -133,7 +141,10 @@ const Layout: React.FC<Props> = ({
         <Footer pages={pageProps.pages} />
         <ModalUI />
         <CheckoutProvider>
-          <SidebarUI links={pages as Link[]} />
+          <SidebarUI
+            links={pages as Link[]}
+            collectionPages={navBarlinks as Link[]}
+          />
         </CheckoutProvider>
         {/* <FeatureBar
           title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."
