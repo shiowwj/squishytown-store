@@ -1,5 +1,5 @@
 .root {
-  @apply grid grid-cols-1 gap-0 lg:px-10 md:px-16 px-16 py-16 lg:py-0 md:py-0;
+  @apply grid grid-cols-2 gap-0 lg:px-10 md:px-16 px-6 py-16 lg:py-0 md:py-0;
 }
 .root > * {
   @apply row-span-1 bg-transparent box-border overflow-hidden;
@@ -12,7 +12,7 @@
 }
 
 .layoutNormal {
-  @apply gap-20;
+  @apply gap-8;
 }
 
 .layoutA {
@@ -113,6 +113,10 @@
   }
 }
 
+.doublerow {
+  @apply gap-20;
+}
+
 @screen md {
   .layoutNormal > * {
     max-height: min-content !important;
@@ -121,7 +125,7 @@
 
 @screen lg {
   .root {
-    @apply grid-cols-3 grid-rows-2;
+    @apply grid-cols-3 grid-rows-2 gap-20;
   }
 
   .root > * {

@@ -55,7 +55,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         price={`${price} ${product.price?.currencyCode}`}
         fontSize={32}
       /> */}
-      <ProductTagV2 name={product.name} price={`${price}`} />
+      <ProductTagV2 name={product.name} price={`${price}`} fontSize={18} />
       <ProductOptions
         options={product.options}
         selectedOptions={selectedOptions}
@@ -87,7 +87,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           </Button>
         )}
       </div>
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <Collapse title="Care">
           This is a limited edition production run. Printing starts when the
           drop ends.
@@ -96,7 +96,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           Make your own white soda-flavored ice cream with this fun DIY kit! All
           you have to do is freeze it in the refrigerator, break the .
         </Collapse>
-      </div>
+      </div> */}
     </div>
   )
 }

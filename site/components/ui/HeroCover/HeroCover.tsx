@@ -11,7 +11,7 @@ interface HeroProps {
 const HeroCover: FC<HeroProps> = ({ className }) => {
   return (
     <div className="bg-transparent">
-      <Container className="max-w-7xl px-6">
+      <Container className="max-w-[100vw] px-6">
         <div className={s.root}>
           <Image
             src={'/bg_hero_main_cover.svg'}
@@ -22,6 +22,7 @@ const HeroCover: FC<HeroProps> = ({ className }) => {
           />
         </div>
       </Container>
+      <div></div>
     </div>
   )
 }

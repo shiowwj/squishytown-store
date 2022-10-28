@@ -5,7 +5,7 @@ import s from './Grid.module.css'
 interface GridProps {
   className?: string
   children?: ReactNode
-  layout?: 'A' | 'B' | 'C' | 'D' | 'normal'
+  layout?: 'A' | 'B' | 'C' | 'D' | 'normal' | 'doublerow'
   variant?: 'default' | 'filled'
 }
 
@@ -25,6 +25,7 @@ const Grid: FC<GridProps> = ({
       [s.layoutNormal]: layout === 'normal',
       [s.default]: variant === 'default',
       [s.filled]: variant === 'filled',
+      [s.doublerow]: layout === 'doublerow',
     },
     className
   )

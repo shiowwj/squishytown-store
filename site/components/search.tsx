@@ -317,7 +317,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
             </div>
           )}
           {data ? (
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 px-7">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-3 px-5">
               {data.products.map((product: Product) => (
                 // variant="simple"
                 <ProductCard
