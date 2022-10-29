@@ -9,6 +9,7 @@ import {
   API_TOKEN,
   SHOPIFY_CUSTOMER_TOKEN_COOKIE,
   SHOPIFY_CHECKOUT_ID_COOKIE,
+  ADMIN_API_TOKEN,
 } from '../const'
 
 import fetchGraphqlApi from './utils/fetch-graphql-api'
@@ -30,6 +31,11 @@ if (!API_URL) {
 if (!API_TOKEN) {
   throw new Error(
     `The environment variable NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN is missing and it's required to access your store`
+  )
+}
+if (!ADMIN_API_TOKEN) {
+  throw new Error(
+    `The environment variable NEXT_PUBLIC_SHOPIFY_ADMIN_ACCESS_TOKEN is missing and it's required to access admin features`
   )
 }
 export interface ShopifyConfig extends CommerceAPIConfig {}

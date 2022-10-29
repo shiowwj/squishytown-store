@@ -19,7 +19,6 @@ export default function MenuSidebarView({
   const { closeSidebar } = useUI()
 
   const handleClick = (_: React.MouseEvent<HTMLDivElement>) => {
-    console.log('handleClick cur displayShopAll:', displayShopAll)
     setDisplayShopAll(!displayShopAll)
   }
 

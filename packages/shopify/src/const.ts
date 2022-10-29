@@ -11,3 +11,6 @@ export const SHOPIFY_COOKIE_EXPIRE = 30
 export const API_URL = `https://${STORE_DOMAIN}/api/2022-07/graphql.json`
 
 export const API_TOKEN = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN
+
+export const ADMIN_API_TOKEN =
+  process.env.NEXT_PUBLIC_SHOPIFY_ADMIN_ACCESS_TOKEN

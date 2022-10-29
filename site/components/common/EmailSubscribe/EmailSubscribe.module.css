@@ -1,0 +1,37 @@
+.root {
+}
+
+.inputRoot {
+  @apply max-h-[6vh] relative text-sm bg-accent-0 text-base w-full transition-colors duration-150 border border-accent-2 rounded-lg;
+}
+
+.input {
+  @apply bg-transparent px-3 py-2 appearance-none w-full transition duration-150 ease-in-out pr-10 rounded-lg;
+}
+
+.input:hover {
+  @apply outline-store-aborder-yellow;
+  /* shadow-outline-normal; */
+}
+
+.input::placeholder {
+  @apply text-accent-3;
+}
+
+.input:focus {
+  @apply outline-none shadow-outline-normal bg-store-aborder-pink text-store-p-dark border-store-aborder-pink border-2;
+}
+
+.input:focus::placeholder {
+  @apply text-store-s-dark;
+}
+
+.searchIconContainer {
+  @apply absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer;
+}
+
+@screen sm {
+  .input {
+    min-width: 300px;
+  }
+}

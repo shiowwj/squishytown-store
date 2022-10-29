@@ -1,0 +1,51 @@
+.root {
+  @apply border-t border-accent-2;
+}
+
+.link {
+  @apply hover:text-store-a-red transition ease-in-out duration-150;
+}
+
+.logoDescription {
+  @apply cursor-pointer;
+}
+
+.description {
+  @apply px-8 max-w-[100vw] lg:max-w-[20vw] font-kiddos flex flex-col text-center lg:text-left;
+}
+
+.social {
+  @apply mx-1;
+  & > svg {
+    @apply transform duration-75 ease-linear;
+  }
+
+  &:hover > svg {
+    @apply scale-110;
+  }
+}
+
+.input {
+  @apply bg-transparent px-3 py-2 appearance-none w-full transition duration-150 ease-in-out pr-10 rounded-lg;
+}
+
+.input:hover {
+  @apply outline-store-aborder-yellow;
+  /* shadow-outline-normal; */
+}
+
+.input::placeholder {
+  @apply text-accent-3;
+}
+
+.input:focus {
+  @apply outline-none shadow-outline-normal bg-store-aborder-pink text-store-p-dark border-store-aborder-pink border-2;
+}
+
+.input:focus::placeholder {
+  @apply text-store-s-dark;
+}
+
+.searchIconContainer {
+  @apply absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none;
+}

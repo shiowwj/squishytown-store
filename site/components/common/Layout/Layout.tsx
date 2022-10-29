@@ -5,7 +5,13 @@ import { Router, useRouter } from 'next/router'
 import { CommerceProvider } from '@framework'
 import LoginView from '@components/auth/LoginView'
 import { useUI } from '@components/ui/context'
-import { Navbar, Footer, BannerBar, NavbarV2 } from '@components/common'
+import {
+  Navbar,
+  Footer,
+  BannerBar,
+  NavbarV2,
+  FooterV2,
+} from '@components/common'
 import ShippingView from '@components/checkout/ShippingView'
 import CartSidebarView from '@components/cart/CartSidebarView'
 import { useAcceptCookies } from '@lib/hooks/useAcceptCookies'
@@ -101,7 +107,6 @@ const SidebarUI: React.FC<{
   collectionPages: LinkProps[]
 }> = ({ links, collectionPages }) => {
   const { displaySidebar, closeSidebar, sidebarView } = useUI()
-  console.log('SidebarUI', collectionPages)
   return displaySidebar ? (
     <SidebarView
       links={links}
@@ -128,9 +133,6 @@ const Layout: React.FC<Props> = ({
     label: p.name,
     href: p.url,
   }))
-
-  // console.log('pages', pages)
-  // console.log('pageProps.pages', pageProps.pages)
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
@@ -138,7 +140,8 @@ const Layout: React.FC<Props> = ({
         <NavbarV2 links={navBarlinks} pages={pages as Link[]} />
         {/* <Navbar links={navBarlinks} /> */}
         <main className="fit mb-12">{children}</main>
-        <Footer pages={pageProps.pages} />
+        <FooterV2 pages={pageProps.pages} />
+        {/* <Footer pages={pageProps.pages} /> */}
         <ModalUI />
         <CheckoutProvider>
           <SidebarUI

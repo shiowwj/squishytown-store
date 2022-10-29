@@ -26,7 +26,6 @@ const ProductCard: FC<Props> = ({
   noNameTag = false,
   variant = 'default',
 }) => {
-  // console.log('cur product', product)
   const { price } = usePrice({
     amount: product.price.value,
     baseAmount: product.price.retailPrice,
