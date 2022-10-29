@@ -46,24 +46,24 @@ export default function Home({
         headline=" Dessert dragée halvah croissant."
         description="Cupcake ipsum dolor sit amet lemon drops pastry cotton candy. Sweet carrot cake macaroon bonbon croissant fruitcake jujubes macaroon oat cake. Soufflé bonbon caramels jelly beans. Tiramisu sweet roll cheesecake pie carrot cake. "
       /> */}
-      <HeroCover />
+      <HeroCover>
+        <CloudNavBar pages={pages} />
 
-      <CloudNavBar pages={pages} />
-
-      <Grid layout="normal" variant="filled" className="pb-16">
-        {products.slice(0, products.length).map((product: any, i: number) => (
-          <ProductCard
-            variant="descbottom"
-            key={product.id}
-            product={product}
-            imgProps={{
-              width: i === 0 ? 1080 : 540,
-              height: i === 0 ? 1080 : 540,
-              priority: true,
-            }}
-          />
-        ))}
-      </Grid>
+        <Grid layout="normal" variant="filled" className="pb-16">
+          {products.slice(0, products.length).map((product: any, i: number) => (
+            <ProductCard
+              variant="descbottom"
+              key={product.id}
+              product={product}
+              imgProps={{
+                width: i === 0 ? 1080 : 540,
+                height: i === 0 ? 1080 : 540,
+                priority: true,
+              }}
+            />
+          ))}
+        </Grid>
+      </HeroCover>
       {/* <Marquee variant="secondary">
         {products.slice(0, 4).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="simple" />
