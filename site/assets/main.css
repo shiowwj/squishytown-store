@@ -9,6 +9,18 @@
 
 @layer base {
   @font-face {
+    font-family: 'Arapey';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Arapey-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Arapey';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/Arapey-Italic.ttf') format('truetype');
+  }
+  @font-face {
     font-family: 'RockoFLF';
     font-style: normal;
     font-weight: 400;

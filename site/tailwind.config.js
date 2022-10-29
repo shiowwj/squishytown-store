@@ -89,6 +89,7 @@ module.exports = {
       fontFamily: {
         rockoflf: ['RockoFLF, sans-serif'],
         kiddos: ['Kiddos, sans-serif'],
+        arapey: ['Arapey, sans-serif'],
       },
     },
   },

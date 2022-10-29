@@ -5,7 +5,7 @@ import type {
 } from 'next'
 import commerce from '@lib/api/commerce'
 import { HeroCover, Text } from '@components/ui'
-import { Layout } from '@components/common'
+import { CloudNavBar, Layout } from '@components/common'
 import getSlug from '@lib/get-slug'
 import { missingLocaleInPages } from '@lib/usage-warns'
 import type { Page } from '@commerce/types/page'
@@ -21,6 +21,7 @@ export async function getStaticProps({
   const pagesPromise = commerce.getAllPages({ config, preview })
   const siteInfoPromise = commerce.getSiteInfo({ config, preview })
   const { pages } = await pagesPromise
+  console.log('pages', pages)
   const { categories } = await siteInfoPromise
   const path = params?.pages.join('/')
   const slug = locale ? `${locale}/${path}` : path
@@ -36,16 +37,19 @@ export async function getStaticProps({
     }))
 
   const page = data?.page
+  const pageName = page?.name
 
   if (!page) {
     return {
       notFound: true,
     }
   }
-
+  console.log('data', data)
+  console.log('pageName', pageName)
   return {
-    props: { pages, page, categories },
+    props: { pages, page, categories, pageName },
     revalidate: 60 * 60, // Every hour
+    // pageName,
   }
 }
 
@@ -70,7 +74,15 @@ export async function getStaticPaths({ locales }: GetStaticPathsContext) {
   }
 }
 
-export default function Pages({ page }: { page: Page }) {
+export default function Pages({
+  page,
+  pages,
+  pageName,
+}: {
+  page: Page
+  pages: Page[]
+  pageName: string
+}) {
   const router = useRouter()
 
   return router.isFallback ? (
@@ -78,9 +90,14 @@ export default function Pages({ page }: { page: Page }) {
   ) : (
     <>
       <HeroCover>
+        <CloudNavBar pages={pages} />
+        <Text variant="heading" className="text-center">
+          {pageName}
+        </Text>
         <div className="max-w-2xl mx-8 sm:mx-auto py-20">
           {page?.body && <Text html={page.body} />}
         </div>
+        {pageName === 'Contact Us' ? <>ADD FAQ EXPANDING STUFF</> : null}
       </HeroCover>
     </>
   )
