@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import commerce from '@lib/api/commerce'
-import { Text } from '@components/ui'
+import { HeroCover, Text } from '@components/ui'
 import { Layout } from '@components/common'
 import getSlug from '@lib/get-slug'
 import { missingLocaleInPages } from '@lib/usage-warns'
@@ -76,9 +76,13 @@ export default function Pages({ page }: { page: Page }) {
   return router.isFallback ? (
     <h1>Loading...</h1> // TODO (BC) Add Skeleton Views
   ) : (
-    <div className="max-w-2xl mx-8 sm:mx-auto py-20">
-      {page?.body && <Text html={page.body} />}
-    </div>
+    <>
+      <HeroCover>
+        <div className="max-w-2xl mx-8 sm:mx-auto py-20">
+          {page?.body && <Text html={page.body} />}
+        </div>
+      </HeroCover>
+    </>
   )
 }
 
