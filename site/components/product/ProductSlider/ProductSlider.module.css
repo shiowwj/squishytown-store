@@ -27,6 +27,7 @@
 }
 
 .album {
+  @apply mx-4 rounded-xl;
   width: 100%;
   height: 100%;
   @apply bg-store-s-light rounded-2xl;

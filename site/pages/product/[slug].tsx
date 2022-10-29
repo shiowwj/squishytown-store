@@ -78,10 +78,10 @@ export default function Slug({
     <h1>Loading...</h1>
   ) : (
     <>
-      <HeroCover />
-
-      <CloudNavBar pages={pages} />
-      <ProductView product={product} relatedProducts={relatedProducts} />
+      <HeroCover>
+        <CloudNavBar pages={pages} />
+        <ProductView product={product} relatedProducts={relatedProducts} />
+      </HeroCover>
     </>
   )
 }
