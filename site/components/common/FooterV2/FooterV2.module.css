@@ -3,7 +3,7 @@
 }
 
 .link {
-  @apply hover:text-store-a-red transition ease-in-out duration-150;
+  @apply hover:text-store-a-red transition ease-in-out duration-150 text-xl;
 }
 
 .logoDescription {

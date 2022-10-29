@@ -1,10 +1,9 @@
 import commerce from '@lib/api/commerce'
 import { CloudNavBar, Layout } from '@components/common'
 import { ProductCard } from '@components/product'
-import { Grid, Marquee, Hero, HeroCover } from '@components/ui'
+import { Grid, HeroCover, Text } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
-import Link from 'next/link'
 
 export async function getStaticProps({
   preview,
@@ -48,8 +47,14 @@ export default function Home({
       /> */}
       <HeroCover>
         <CloudNavBar pages={pages} />
-
-        <Grid layout="normal" variant="filled" className="pb-16">
+        <Text variant="heading" className="text-center">
+          {'Latest Products'}
+        </Text>
+        <Grid
+          layout="normal"
+          variant="filled"
+          className="pb-16 md:mt-6 lg:mt-8 "
+        >
           {products.slice(0, products.length).map((product: any, i: number) => (
             <ProductCard
               variant="descbottom"

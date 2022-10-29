@@ -14,7 +14,7 @@ const CloudNavBar: React.FC<CloudNavBarProps> = ({ pages }) => {
         <a className={s.link}>
           <CloudComponent>
             <div className={s.div}>
-              <span className={s.span}>All</span>
+              <span className={s.span}>Shop All</span>
             </div>
           </CloudComponent>
         </a>

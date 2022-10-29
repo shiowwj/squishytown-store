@@ -16,29 +16,6 @@ const EmailSubscribe: FC<Props> = ({
   id = 'email_subscription',
 }) => {
   const [subscribed, setSubscribed] = useState(false)
-  // const [emailInput, setEmailInput] = useState<string>()
-
-  // const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  //   e.preventDefault()
-  //   const q = e.currentTarget.value
-  //   setEmailInput(q)
-  //   if (e.key === 'Enter' && emailInput) {
-  //     console.log('enter', emailInput)
-  //     // handleSubmission(emailInput)
-  //   }
-  //   console.log('no email', emailInput)
-  // }
-
-  // const handleOnChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  //   e.preventDefault()
-  //   const q = e.currentTarget.value;
-  //   setEmailInput(q)
-  // }
-
-  // const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
-  //   e.preventDefault()
-  //   console.log(emailInput)
-  // }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()

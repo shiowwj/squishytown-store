@@ -4,7 +4,7 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import commerce from '@lib/api/commerce'
-import { HeroCover, Text } from '@components/ui'
+import { Accordion, ContactUs, HeroCover, Text } from '@components/ui'
 import { CloudNavBar, Layout } from '@components/common'
 import getSlug from '@lib/get-slug'
 import { missingLocaleInPages } from '@lib/usage-warns'
@@ -21,7 +21,6 @@ export async function getStaticProps({
   const pagesPromise = commerce.getAllPages({ config, preview })
   const siteInfoPromise = commerce.getSiteInfo({ config, preview })
   const { pages } = await pagesPromise
-  console.log('pages', pages)
   const { categories } = await siteInfoPromise
   const path = params?.pages.join('/')
   const slug = locale ? `${locale}/${path}` : path
@@ -44,8 +43,6 @@ export async function getStaticProps({
       notFound: true,
     }
   }
-  console.log('data', data)
-  console.log('pageName', pageName)
   return {
     props: { pages, page, categories, pageName },
     revalidate: 60 * 60, // Every hour
@@ -89,15 +86,20 @@ export default function Pages({
     <h1>Loading...</h1> // TODO (BC) Add Skeleton Views
   ) : (
     <>
-      <HeroCover>
+      <HeroCover withBanner={false}>
         <CloudNavBar pages={pages} />
         <Text variant="heading" className="text-center">
           {pageName}
         </Text>
-        <div className="max-w-2xl mx-8 sm:mx-auto py-20">
+        <div className="max-w-2xl mx-8 sm:mx-auto pb-20">
           {page?.body && <Text html={page.body} />}
+          {pageName === 'Contact Us' ? (
+            <>
+              <Accordion />
+              <ContactUs />
+            </>
+          ) : null}
         </div>
-        {pageName === 'Contact Us' ? <>ADD FAQ EXPANDING STUFF</> : null}
       </HeroCover>
     </>
   )

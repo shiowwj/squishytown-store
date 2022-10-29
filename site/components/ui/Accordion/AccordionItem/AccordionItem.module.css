@@ -1,0 +1,53 @@
+.root {
+  @apply border-b-[1px] border-store-a-blue text-store-a-blue;
+  /* border-top: 1px solid #9f9f9f; */
+}
+
+.root:hover {
+  @apply border-b-[1px] border-store-aborder-pink;
+}
+
+/* activate toggle */
+.root.active .itemButton {
+  @apply bg-transparent;
+}
+
+.itemButton:hover {
+  @apply text-store-aborder-pink;
+}
+
+.itemButton {
+  @apply bg-transparent;
+  font-size: 16px;
+  /* background-color: #008593; */
+  text-align: left;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 18px 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.icon {
+  @apply text-store-s-light bg-store-a-blue rounded-full;
+}
+
+.title {
+  @apply ml-3 text-xl capitalize;
+}
+
+.contentAnswer {
+  @apply bg-transparent text-store-s-dark text-lg;
+  /* background-color: #f7f7f7; */
+  padding: 20px;
+}
+
+.contentWrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.2s;
+}

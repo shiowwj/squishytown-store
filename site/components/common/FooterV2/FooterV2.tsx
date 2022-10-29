@@ -35,7 +35,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 text-primary bg-primary transition-colors duration-150 px-8 lg:px-24">
           <div className="flex flex-row flex-1 col-span-1 lg:col-span-5 justify-between lg:justify-evenly">
             {/* SHOP */}
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-[20vw]">
               <Text variant="pageHeading" className="mb-2">
                 Shop
               </Text>
@@ -49,7 +49,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
             </div>
 
             {/* SHIPPING & PAYMENT */}
-            <div className="flex flex-col">
+            <div className="flex flex-col text-right md:text-right lg:text-left">
               <Text variant="pageHeading" className="mb-2">
                 Shipping &amp; Payment
               </Text>
@@ -77,11 +77,11 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 </div>
               </Link>
               <div className={s.description}>
-                <div className="text-3xl mb-5 font-extrabold">
+                <div className="text-4xl mb-5 font-extrabold">
                   <span>The Squishy Town</span>
                 </div>
                 <div>
-                  <span className="text-lg font-normal">
+                  <span className="text-xl font-normal">
                     A place where you find pieces of your childhood or a place
                     where you create your childhood
                   </span>
@@ -111,7 +111,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
         </div>
 
         {/* copyright */}
-        <div className="pt-6 px-6 pb-10 flex flex-col md:flex-row justify-center items-center space-y-4 text-accent-6 text-lg font-kiddos">
+        <div className="pt-6 px-6 pb-10 flex flex-col md:flex-row justify-center items-center space-y-4 text-accent-6 text-2xl font-kiddos">
           <div>
             <span>&copy; Squishytown 2022. All Rights Reserved.</span>
           </div>

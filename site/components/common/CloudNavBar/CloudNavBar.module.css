@@ -1,5 +1,5 @@
 .root {
-  @apply hidden lg:visible md:visible lg:flex md:flex lg:flex-row flex-wrap justify-center lg:w-[90vw] lg:mx-auto mb-6;
+  @apply hidden lg:visible md:visible lg:flex md:flex lg:flex-row flex-wrap justify-center lg:w-fit lg:mx-auto mb-6;
 }
 
 .link {
@@ -7,7 +7,7 @@
 }
 
 .span {
-  @apply py-3 md:py-0 md:pb-4 items-center inline-flex min-h-[80px] text-center;
+  @apply py-3 md:py-0 md:pb-4 items-center inline-flex min-h-[80px] text-center font-semibold text-xl;
 }
 
 .div {

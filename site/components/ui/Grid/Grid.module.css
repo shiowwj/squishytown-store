@@ -12,7 +12,7 @@
 }
 
 .layoutNormal {
-  @apply gap-8;
+  @apply gap-4;
 }
 
 .layoutA {
@@ -125,7 +125,7 @@
 
 @screen lg {
   .root {
-    @apply grid-cols-3 grid-rows-2 gap-20;
+    @apply grid-cols-3 grid-rows-2 gap-10;
   }
 
   .root > * {

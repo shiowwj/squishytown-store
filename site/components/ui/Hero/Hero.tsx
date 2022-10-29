@@ -3,7 +3,6 @@ import { Container } from '@components/ui'
 import { ArrowRight } from '@components/icons'
 import s from './Hero.module.css'
 import Link from 'next/link'
-import Image from 'next/image'
 interface HeroProps {
   className?: string
   headline: string
