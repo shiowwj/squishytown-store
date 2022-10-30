@@ -55,7 +55,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         price={`${price} ${product.price?.currencyCode}`}
         fontSize={32}
       /> */}
-      <ProductTagV2 name={product.name} price={`${price}`} fontSize={18} />
+      <ProductTagV2 name={product.name} price={`${price}`} fontSize={48} />
       <ProductOptions
         options={product.options}
         selectedOptions={selectedOptions}

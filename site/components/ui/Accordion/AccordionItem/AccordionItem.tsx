@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp } from '@components/icons'
 import cn from 'clsx'
-import React, { FC, useRef, useState } from 'react'
+import React, { FC, useRef } from 'react'
 import { AccordionItemProps } from '.'
 import s from './AccordionItem.module.css'
 
@@ -35,7 +35,6 @@ const Accordion: FC<AccordionItemProps> = ({
             : { height: '0px' }
         }
       >
-        {/* <div className={`${s.contentWrapper} ${active ? 'open' : ''}`}> */}
         <div className={s.contentAnswer}>{content}</div>
       </div>
     </li>
