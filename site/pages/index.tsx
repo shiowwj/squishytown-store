@@ -47,7 +47,7 @@ export default function Home({
       /> */}
       <HeroCover>
         <CloudNavBar pages={pages} />
-        <Text variant="heading" className="text-center">
+        <Text variant="pageHeading" className="text-center">
           {'Latest Products'}
         </Text>
         <Grid

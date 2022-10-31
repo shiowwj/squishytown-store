@@ -3,7 +3,7 @@ import { useAddItem } from '@framework/cart'
 import { FC, useEffect, useState } from 'react'
 import { ProductOptions } from '@components/product'
 import type { Product } from '@commerce/types/product'
-import { Button, Text, Rating, Collapse, useUI } from '@components/ui'
+import { Button, Text, useUI } from '@components/ui'
 import {
   getProductVariant,
   selectDefaultOptionFromProduct,
@@ -55,7 +55,12 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         price={`${price} ${product.price?.currencyCode}`}
         fontSize={32}
       /> */}
-      <ProductTagV2 name={product.name} price={`${price}`} fontSize={48} />
+      <ProductTagV2
+        name={product.name}
+        price={`${price}`}
+        fontSize={32}
+        className={'leading-5'}
+      />
       <ProductOptions
         options={product.options}
         selectedOptions={selectedOptions}
